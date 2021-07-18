@@ -94,8 +94,9 @@ li $v0, 4
 syscall
 
 equilatero:
-or $t4, $t0, $t1
-bne $t4, $t2, escaleno
+bne $t0, $t1, escaleno
+bne $t1, $t2, escaleno
+bne $t0, $t2, escaleno
 la $a0, equi_msg
 li $v0, 4
 syscall
